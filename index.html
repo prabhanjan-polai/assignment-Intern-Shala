@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment Intern Shala </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF3B6A',
+                        'primary-light': '#FFE3EA',
+                        'secondary-light': '#FFD6E3'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.querySelector('.mobile-menu-icon');
+            const closeIcon = document.querySelector('.mobile-menu-close');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+        }
+
+
+         .company-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .business-tagline {
+            font-size: 12px;
+            color: #666;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+         .hero-btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+
+         .hero-stats {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rating-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #FF3B6A;
+        }
+        .rating-info {
+            font-size: 14px;
+            color: #666;
+        }
+.resume-count {
+            background: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+    </style>
+</head>
+
+<body class="bg-pink-200 font-sans">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-6 bg-white shadow-md rounded-2xl relative">
+        <div class="flex justify-between items-center">
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23FF3B6A'/%3E%3C/svg%3E" alt="Company Logo" class="logo-icon">
+                <div class="logo-text">
+                    <span class="company-name">COMPANY</span>
+                    <span class="business-tagline">business tagline</span>
+                </div>
+            </div>
+
+            <!-- Mobile menu button nava bar -->
+            <button id="mobile-menu-button" class="lg:hidden text-gray-600 hover:text-primary focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+
+            <!-- Desktop Menu code  -->
+            <div class="hidden lg:flex space-x-10">
+                <a href="#" class="text-gray-800 hover:text-primary font-medium">Home</a>
+                <a href="#" class="text-gray-800 hover:text-primary font-medium">About Us</a>
+                <a href="#" class="text-gray-800 hover:text-primary font-medium">Our Services</a>
+                <a href="#" class="text-gray-800 hover:text-primary font-medium">Pricing</a>
+                <a href="#" class="text-gray-800 hover:text-primary font-medium">FAQ</a>
+            </div>
+
+            <!-- Desktop Button -->
+            <div class="hidden lg:flex items-center space-x-6">
+                <button class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 font-medium">
+                    Get A Quote
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden">
+            <div class="absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-2xl mt-2 py-4 px-6 space-y-4 transition-all duration-300 ease-in-out">
+                <a href="#" class="block text-gray-800 hover:text-primary font-medium py-2">Home</a>
+                <a href="#" class="block text-gray-800 hover:text-primary font-medium py-2">About Us</a>
+                <a href="#" class="block text-gray-800 hover:text-primary font-medium py-2">Our Services</a>
+                <a href="#" class="block text-gray-800 hover:text-primary font-medium py-2">Pricing</a>
+                <a href="#" class="block text-gray-800 hover:text-primary font-medium py-2">FAQ</a>
+                <button class="w-full bg-primary text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 font-medium mt-4">
+                    Get A Quote
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 pt-20 pb-24">
+        <div class="flex flex-col lg:flex-row items-center max-w-6xl mx-auto">
+            <div class="lg:w-1/2 lg:pr-12 mb-12 lg:mb-0">
+                <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
+                    Your Resume
+                    <span class="text-red-600 bg-opacity-90">Deserves A Yes</span> Let's<br>Make It Happen
+                </h1>
+                <p class="text-gray-600  mb-12 leading-relaxed">
+                    If Your Resume Isn't Getting Responses, It's Time For An Upgrade. Get An ATS-Optimized Resume Crafted By HR Experts To Help You Land More Interviews. Our Resumes Are Designed To Get Your Foot In The Door And Place Your Name At The Top Of The Shortlist.
+                </p>
+
+              
+              
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                   <button class="border-2 border-gray-200 text-gray-800 px-3 py-4 rounded-full hover:border-primary hover:text-primary font-medium text-lg">RESUME PACKAGES</button>
+                    <button class="bg-primary text-white px-3 py-4 rounded-full hover:bg-opacity-90 font-medium text-lg">CONTACT US</button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="rating">
+                        <span class="rating-number">4.9</span>
+                        <div class="rating-info">Instructor Rating</div>
+                    </div>
+                    <div class="resume-count">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M8 1L1 6l7 4 6-3.5V12h1V6L8 1z' fill='%23FF3B6A'/%3E%3C/svg%3E" alt="Resume icon">
+                        260+ Online Resume Created
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="bg-gradient-to-br from-primary-light to-secondary-light rounded-3xl p-8">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
+                        alt="Hero Image" class="rounded-2xl w-full h-auto shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-primary-light py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">                
+               You're Not Just <span class="text-pink-600 bg-opacity-90">Another Applicant</span> And Your<br>Resume Shouldn't Look Like One</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
+                <!-- Feature Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up opacity-0"
+                    style="animation: fadeInUp 0.6s ease-out forwards;">
+                    <div
+                        class="w-16 h-16 bg-primary-light rounded-full mb-6 flex items-center justify-center transform transition duration-300 hover:rotate-12">
+                        <svg class="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-primary"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                    </div>
+                    
+
+
+                  <h3 class="text-2xl font-bold mb-4 transition-colors duration-300 hover:text-primary">A Resume Format That<br>Gets You Interviews</h3>
+                    <p>Get a professionally written,<br>keyword-optimized resume that<br>lands in recruiter inboxes.</p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up opacity-0"
+                    style="animation: fadeInUp 0.6s ease-out 0.2s forwards;">
+                    <div
+                        class="w-16 h-16 bg-primary-light rounded-full mb-6 flex items-center justify-center transform transition duration-300 hover:rotate-12">
+                        <svg class="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-primary"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                   <h3 class="text-2xl font-bold mb-4 transition-colors duration-300 hover:text-primary">A Cover Letter Style That<br>Stands Out Strong</h3>
+                    <p>Stand out with a cover letter<br>that speaks directly to the role<br>and reflects your strengths.</p>
+                </div>
+
+
+<!-- Feature Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up opacity-0"
+                    style="animation: fadeInUp 0.6s ease-out 0.4s forwards;">
+                    <div
+                        class="w-16 h-16 bg-primary-light rounded-full mb-6 flex items-center justify-center transform transition duration-300 hover:rotate-12">
+                        <svg class="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-primary"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 transition-colors duration-300 hover:text-primary">A LinkedIn Profile That<br>Works For You</h3>
+                    <p>Attract the right eyes with<br>conversations, and show up in<br>recruiter searches.</p>
+                </div>
+
+
+<!-- Feature Card 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up opacity-0"
+                    style="animation: fadeInUp 0.6s ease-out 0.4s forwards;">
+                    <div
+                        class="w-16 h-16 bg-primary-light rounded-full mb-6 flex items-center justify-center transform transition duration-300 hover:rotate-12">
+                        <svg class="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-primary"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </div>
+                      <h3 class="text-2xl font-bold mb-4 transition-colors duration-300 hover:text-primary">An Interview Strategy That<br>Builds Confidence</h3>
+                    <p>Interview preparation with our<br>HR professionals so you speak<br>clearly confidently.</p>
+                </div>
+
+                </div>
+
+               
+
+                
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
