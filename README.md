@@ -2,13 +2,9 @@
 
 A modern, responsive landing page built with HTML and Tailwind CSS for a resume writing service. This project demonstrates modern web development practices with a focus on clean design and smooth animations.
 
-## 🔧 CHECK IT OUT 
-
-1. Clone the repository:
-   ```
-   https://prabhanjan-polai.github.io/assignment-Intern-Shala/
-   ```
-
+## 🔧 CHECK IT OUT  
+[https://prabhanjan-polai.github.io/assignment-Intern-Shala/ ]
+-LIVE PRIVIEW
 
 ## 🚀 Features
 
@@ -131,4 +127,5 @@ assignment-Intern-Shala/
 
 This project is part of an assignment for Intern Shala and is available for reference and educational purposes.
 # assignment-Intern-Shala
+
 
